@@ -1,8 +1,11 @@
-<script context="module" lang="ts">
+<script lang="ts">
   import { page } from '$app/stores';
 
-  let errorMessage = page.error.message || 'An unexpected error occurred.';
-  let errorStatus = page.status || 500;
+  let errorStatus: number;
+  let errorMessage: string;
+
+  $: errorStatus = $page.status || 500;
+  $: errorMessage = $page.error?.message || 'An unexpected error occurred.';
 </script>
 
 <style>
