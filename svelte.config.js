@@ -12,13 +12,6 @@ const config = {
 			fallback: '200.html',
 			precompress: false
 		})
-		// paths: {
-		// 	$types: 'src/types',
-		// 	$components: 'src/components',
-		// 	$stores: 'src/stores',
-		// 	$utils: 'src/utils',
-		// 	$routes: 'src/routes'
-		// }
 	}
 };
 
