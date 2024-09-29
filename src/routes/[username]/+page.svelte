@@ -4,12 +4,14 @@
 
 	const usernames = ['john', 'jane', 'alice'];
 
-	let username: string;
-	
-	$: username = $page.params.username;
+	let username: string | undefined;
 
-	if (username && !usernames.includes(username)) {
-		throw error(404, `Page: "${username}" not found`);
+	$: {
+		username = $page.params.username;
+
+		if (username && !usernames.includes(username)) {
+			throw error(404, `User: "${username}" not found`);
+		}
 	}
 </script>
 
