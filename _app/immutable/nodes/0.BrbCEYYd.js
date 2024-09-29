@@ -1,1 +1,0 @@
-import{c as r,b as f}from"../chunks/disclose-version.C20p-vEo.js";import{v as i,h as o,R as l}from"../chunks/runtime.DAfP81pc.js";function d(n,e,t,a){i&&o(),e===void 0||e(n,t)}function s(n){var t;var e=(t=n.$$slots)==null?void 0:t.default;return e===!0?n.children:e}function m(n,e){var t=r(),a=l(t);d(a,s(e),{}),f(n,t)}export{m as component};
