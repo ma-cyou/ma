@@ -11,10 +11,7 @@ const config = {
 			assets: 'build',
 			fallback: '404.html',
 			precompress: false
-		}),
-		prerender: {
-			default: true
-		}
+		})
 	}
 };
 
