@@ -12,7 +12,9 @@ const config = {
 			fallback: '404.html',
 			precompress: false
 		}),
-		prerender: ['*']
+		prerender: {
+			default: true
+		}
 	}
 };
 
