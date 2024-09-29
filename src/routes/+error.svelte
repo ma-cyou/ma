@@ -1,14 +1,13 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 
+	console.log('page:', page, '$page:', $page);
+
 	let errorStatus: number;
 	let errorMessage: string;
 
 	$: errorStatus = $page.status || 500;
-	$: errorMessage = $page.error?.body?.message || $page.error?.message ||  'An unexpected error occurred.';
-
-	console.log("page:", page, "$page:", $page, "\nerrorStatus:", errorStatus, "errorMessage:", errorMessage);
-	
+	$: errorMessage = $page.error?.message || 'An unexpected error occurred.';
 </script>
 
 <div class="error-page">
