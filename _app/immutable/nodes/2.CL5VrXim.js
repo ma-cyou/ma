@@ -1,1 +1,0 @@
-import{b as a,t as o}from"../chunks/disclose-version.B3M4yZ7B.js";import{a2 as p}from"../chunks/runtime.BtBATymf.js";var r=o('<h1>Welcome to SvelteKit</h1> <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>',1);function n(t){var e=r();p(2),a(t,e)}export{n as component};
