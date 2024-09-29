@@ -6,6 +6,9 @@
 
 	$: errorStatus = $page.status || 500;
 	$: errorMessage = $page.error?.body?.message || $page.error?.message ||  'An unexpected error occurred.';
+
+	console.log("page:", page, "$page:", $page, "\nerrorStatus:", errorStatus, "errorMessage:", errorMessage);
+	
 </script>
 
 <div class="error-page">
