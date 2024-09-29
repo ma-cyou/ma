@@ -1,15 +1,13 @@
-<script context="module">
-    const usernames = ['john', 'jane', 'alice'];
+<script context="module" lang="ts">
+	import { error } from '@sveltejs/kit';
+	import { page } from '$app/stores';
 
-    import { error } from '@sveltejs/kit';
-    
-    export let params
-    
-    const username = params.username;
+	const usernames = ['john', 'jane', 'alice'];
+	const username = page.params.username;
 
-    if (!usernames.includes(username)) {
-        throw error(404, `User ${username} not found`);
-    }
+	if (!usernames.includes(username)) {
+		throw error(404, `Page: "${username}" not found`);
+	}
 </script>
 
-<h1>Hello {params.username}!</h1>
+<h1>Hello {username}!</h1>

@@ -1,4 +1,4 @@
-<script>
+<script context="module" lang="ts">
     // This is the index route
 </script>
 

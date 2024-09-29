@@ -1,9 +1,8 @@
-<script>
-  export let error;
-  export let status;
+<script context="module" lang="ts">
+  import { page } from '$app/stores';
 
-  let errorMessage = error?.message || 'An unexpected error occurred.';
-  let errorStatus = status || 500;
+  let errorMessage = page.error.message || 'An unexpected error occurred.';
+  let errorStatus = page.status || 500;
 </script>
 
 <style>
