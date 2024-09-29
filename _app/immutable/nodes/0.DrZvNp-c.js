@@ -1,0 +1,1 @@
+import{c as r,a as f}from"../chunks/disclose-version.CgPJCqME.js";import{h as i,a as o,A as l}from"../chunks/runtime.DDJsI59r.js";function d(a,e,t,n){i&&o(),e===void 0||e(a,t)}function s(a){var t;var e=(t=a.$$slots)==null?void 0:t.default;return e===!0?a.children:e}function m(a,e){var t=r(),n=l(t);d(n,s(e),{}),f(a,t)}export{m as component};
