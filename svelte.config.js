@@ -11,16 +11,14 @@ const config = {
 			assets: 'build',
 			fallback: '200.html',
 			precompress: false
-		}),
-		paths: {
-			$lib: 'src/lib',
-			$types: 'src/types',
-			$components: 'src/components',
-			$stores: 'src/stores',
-			$utils: 'src/utils',
-			$routes: 'src/routes'
-		},
-		trailingSlash: 'always'
+		})
+		// paths: {
+		// 	$types: 'src/types',
+		// 	$components: 'src/components',
+		// 	$stores: 'src/stores',
+		// 	$utils: 'src/utils',
+		// 	$routes: 'src/routes'
+		// }
 	}
 };
 
