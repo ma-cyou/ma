@@ -1,0 +1,1 @@
+import{z as r,x as t,w as c,u as i,ag as e,k as l,ah as u,ai as _}from"./runtime.tM2GHAnp.js";function g(){const s=c,n=s.l.u;n&&(n.b.length&&r(()=>{f(s),e(n.b)}),t(()=>{const o=i(()=>n.m.map(_));return()=>{for(const a of o)typeof a=="function"&&a()}}),n.a.length&&t(()=>{f(s),e(n.a)}))}function f(s){if(s.l.s)for(const n of s.l.s)l(n);u(s.s)}export{g as i};
