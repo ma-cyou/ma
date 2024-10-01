@@ -23,7 +23,7 @@
 		"test:e2e": "playwright test"
 	},
 	"devDependencies": {
-		"ma-shared": "mapagmataas1331/ma-shared",
+		"ma-shared": "ma-cyou/ma-shared",
 		"@playwright/test": "^1.47.2",
 		"@sveltejs/adapter-auto": "^3.2.5",
 		"@sveltejs/adapter-static": "^3.0.5",
