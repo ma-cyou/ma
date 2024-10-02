@@ -1,0 +1,28 @@
+Global Project Path: C:\Users\ma\Desktop\ma
+Total Files: 25
+
+static\.nojekyll
+static\android-chrome-192x192-light.png
+static\android-chrome-192x192.png
+static\android-chrome-512x512-light.png
+static\android-chrome-512x512.png
+static\apple-touch-icon.png
+static\browserconfig.xml
+static\cname
+static\favicon-16x16-light.png
+static\favicon-16x16.png
+static\favicon-32x32-light.png
+static\favicon-32x32.png
+static\favicon-light.ico
+static\favicon-light.png
+static\favicon.ico
+static\favicon.png
+static\favicon.svg
+static\mstile-144x144.png
+static\mstile-150x150.png
+static\mstile-310x150.png
+static\mstile-310x310.png
+static\mstile-70x70.png
+static\safari-pinned-tab.svg
+static\site-light.webmanifest
+static\site.webmanifest
