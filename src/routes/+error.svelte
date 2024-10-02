@@ -13,17 +13,17 @@
 >
 	<!-- Decorative Background Shapes -->
 	<div
-		class="animate-blob absolute left-0 top-10 h-40 w-40 rounded-full bg-blue-200 opacity-30 mix-blend-multiply blur-xl filter animate-pulse"
+		class="animate-blob absolute left-0 top-10 h-40 w-40 animate-pulse rounded-full bg-blue-200 opacity-30 mix-blend-multiply blur-xl filter"
 	></div>
 	<div
-		class="animate-blob absolute bottom-20 right-10 h-40 w-40 rounded-full bg-yellow-200 opacity-30 mix-blend-multiply blur-xl filter animate-pulse"
+		class="animate-blob absolute bottom-20 right-10 h-40 w-40 animate-pulse rounded-full bg-yellow-200 opacity-30 mix-blend-multiply blur-xl filter"
 	></div>
 	<div
-		class="animate-blob absolute right-40 top-40 h-40 w-40 rounded-full bg-pink-200 opacity-30 mix-blend-multiply blur-xl filter animate-pulse"
+		class="animate-blob absolute right-40 top-40 h-40 w-40 animate-pulse rounded-full bg-pink-200 opacity-30 mix-blend-multiply blur-xl filter"
 	></div>
 
 	<!-- Logo Section -->
-	<div class="w-full max-w-56 md:max-w-lg mb-8 opacity-75 drop-shadow-xl">
+	<div class="mb-8 w-full max-w-56 opacity-75 drop-shadow-xl md:max-w-lg">
 		<img src="/favicon.svg" alt="Logo" class="w-full object-contain" />
 	</div>
 
