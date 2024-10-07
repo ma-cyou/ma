@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import { language } from '../stores/language';
 	import { theme } from '../stores/theme';
 	import Logo from '../components/Logo.svelte';
 
@@ -14,10 +15,9 @@
 	class="relative flex h-full w-full flex-col items-center justify-center bg-gradient-to-b from-blue-50 to-blue-100 p-6 text-center dark:from-blue-900 dark:to-blue-800"
 >
 	<div class="mb-8 w-1/2 max-w-lg drop-shadow-xl md:max-w-lg">
-		<Logo plusClass={$theme === 'light' ? 'text-red-600' : 'text-red-400'} />
+		<Logo classes="fill-current text-red-600 dark:text-red-400" />
 	</div>
 
-	<!-- Error Message Section -->
 	<div
 		class="w-full max-w-lg transform rounded-lg bg-white p-10 text-gray-800 shadow-xl backdrop-blur-lg transition-transform hover:scale-105 hover:shadow-2xl dark:bg-gray-800 dark:bg-opacity-80 dark:text-white"
 	>
@@ -29,13 +29,13 @@
 				on:click={() => history.back()}
 				class="rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white shadow-lg transition-colors duration-300 ease-in-out hover:bg-blue-700 hover:shadow-xl dark:bg-blue-500 dark:hover:bg-blue-600"
 			>
-				Go Back
+				{$language === 'ru' ? 'Вернуться Назад' : 'Go Back'}
 			</button>
 			<a
 				href="/"
 				class="rounded-lg bg-gray-300 px-6 py-3 font-semibold text-gray-900 shadow-lg transition-colors duration-300 ease-in-out hover:bg-gray-400 hover:shadow-xl dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
 			>
-				Go to Homepage
+				{$language === 'ru' ? 'На Главную страницу' : 'Go to Homepage'}
 			</a>
 		</div>
 	</div>

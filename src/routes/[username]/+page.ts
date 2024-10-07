@@ -1,6 +1,7 @@
 import { error } from '@sveltejs/kit';
+import type { PageLoad } from './$types';
 
-export async function load({ params }) {
+export const load: PageLoad = ({ params }) => {
 	const usernames = ['john', 'jane', 'alice'];
 	const { username } = params;
 
@@ -11,4 +12,4 @@ export async function load({ params }) {
 	return {
 		username
 	};
-}
+};

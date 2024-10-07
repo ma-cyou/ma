@@ -1,10 +1,14 @@
 <script lang="ts">
 	import '../app.scss';
+	import LanguageSwitcher from '../components/LanguageSwitcher.svelte';
 	import ThemeSwitcher from '../components/ThemeSwitcher.svelte';
 	import { onMount } from 'svelte';
+	import { getAllCookies } from '../utils/cookies';
+	import Header from '../components/Header.svelte';
 
 	onMount(() => {
 		console.log('Layout mounted');
+		console.log(getAllCookies());
 	});
 </script>
 
@@ -59,11 +63,10 @@
 	<title>macyou</title>
 </svelte:head>
 
-<header class="flex items-center justify-between">
-	<h1 class="m-2 text-3xl font-bold">macyou</h1>
-	<div class="m-2 flex items-center space-x-4">
-
-		<ThemeSwitcher />
-	</div>
-</header>
+<Header />
+<h1 class="m-2 text-3xl font-bold">macyou</h1>
+<div class="m-2 flex items-center space-x-4">
+	<LanguageSwitcher />
+	<ThemeSwitcher />
+</div>
 <slot></slot>
