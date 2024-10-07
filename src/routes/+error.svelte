@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { language } from '../stores/language';
-	import { theme } from '../stores/theme';
 	import Logo from '../components/Logo.svelte';
 
 	let errorStatus: number;
@@ -15,7 +14,7 @@
 	class="relative flex h-full w-full flex-col items-center justify-center bg-gradient-to-b from-blue-50 to-blue-100 p-6 text-center dark:from-blue-900 dark:to-blue-800"
 >
 	<div class="mb-8 w-1/2 max-w-lg drop-shadow-xl md:max-w-lg">
-		<Logo classes="fill-current text-red-600 dark:text-red-400" />
+		<Logo class="fill-current text-red-600 dark:text-red-400" />
 	</div>
 
 	<div

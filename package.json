@@ -50,5 +50,12 @@
 		"vite": "^5.4.8",
 		"vitest": "^2.1.2"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"bits-ui": "^0.21.16",
+		"clsx": "^2.1.1",
+		"svelte-radix": "^1.1.1",
+		"tailwind-merge": "^2.5.3",
+		"tailwind-variants": "^0.2.1"
+	}
 }
