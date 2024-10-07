@@ -20,10 +20,6 @@ export const theme = writable<string>(getInitialTheme());
 theme.subscribe((value) => {
 	if (typeof window !== 'undefined') {
 		localStorage.setItem('theme', value);
-		if (value === 'dark') {
-			document.documentElement.classList.add('dark');
-		} else {
-			document.documentElement.classList.remove('dark');
-		}
+		document.documentElement.classList.toggle('dark', value === 'dark');
 	}
 });

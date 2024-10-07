@@ -59,5 +59,11 @@
 	<title>macyou</title>
 </svelte:head>
 
-<ThemeSwitcher />
+<header class="flex items-center justify-between">
+	<h1 class="m-2 text-3xl font-bold">macyou</h1>
+	<div class="m-2 flex items-center space-x-4">
+
+		<ThemeSwitcher />
+	</div>
+</header>
 <slot></slot>
