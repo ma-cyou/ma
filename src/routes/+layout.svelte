@@ -6,12 +6,6 @@
 
 	import '@/app.scss';
 
-	const navLinks: { [key: string]: { name: string; nameRu: string } } = {
-		'/': { name: 'Home', nameRu: 'Главная' },
-		'/docs': { name: 'Docs', nameRu: 'Документация' },
-		'/settings': { name: 'Settings', nameRu: 'Настройки' }
-	};
-
 	onMount(() => {
 		console.log('Layout mounted');
 	});
@@ -19,6 +13,6 @@
 
 <Head />
 
-<Header {navLinks} />
+<Header />
 
 <slot></slot>
