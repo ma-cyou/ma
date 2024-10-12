@@ -80,7 +80,10 @@
 		<!-- OpenGraph Meta Tags -->
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
-		<meta property="og:image" content="https://og-examples.vercel.sh/api/static" />
+		<meta
+			property="og:image"
+			content="https://dynamic-og-image-generator.vercel.app/api/generate?title={description}&author={title}&websiteUrl={url}&avatar=https%3A%2F%2Ftest.ma.cyou%2Fandroid-chrome-512x512-light.png&theme=default"
+		/>
 		<meta property="og:url" content={url} />
 		<meta property="og:type" content="website" />
 		<meta property="og:site_name" content={title} />
@@ -91,10 +94,17 @@
 		<meta name="twitter:site" content={'@' + author} />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
-		<meta name="twitter:image" content="https://og-examples.vercel.sh/api/static" />
+		<meta
+			name="twitter:image"
+			content="https://dynamic-og-image-generator.vercel.app/api/generate?title={description}&author={title}&websiteUrl={url}&avatar=https%3A%2F%2Ftest.ma.cyou%2Fandroid-chrome-512x512-light.png&theme=default"
+		/>
 
 		<!-- Preload OpenGraph Image -->
-		<link rel="preload" href="https://og-examples.vercel.sh/api/static" as="image" />
+		<link
+			rel="preload"
+			href="https://dynamic-og-image-generator.vercel.app/api/generate?title={description}&author={title}&websiteUrl={url}&avatar=https%3A%2F%2Ftest.ma.cyou%2Fandroid-chrome-512x512-light.png&theme=default"
+			as="image"
+		/>
 	{/if}
 
 	<!-- Cookie Consent -->
