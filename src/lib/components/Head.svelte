@@ -94,38 +94,30 @@
 		<meta name="twitter:image" content="https://og-examples.vercel.sh/api/static" />
 
 		<!-- Preload OpenGraph Image -->
-		<link rel="preload" href="/og-image.png" as="image" />
+		<link rel="preload" href="https://og-examples.vercel.sh/api/static" as="image" />
 	{/if}
 
 	<!-- Cookie Consent -->
-	<script>
+	<script async>
 		(function () {
-			function getCookie(name) {
-				const nameEQ = name + '=';
-				const ca = document.cookie.split(';');
-				for (let i = 0; i < ca.length; i++) {
-					let c = ca[i].trim();
-					if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length);
-				}
-				return null;
-			}
+			const getCookie = (name) =>
+				document.cookie
+					.split('; ')
+					.find((row) => row.startsWith(name))
+					?.split('=')[1];
 
+			// Theme Logic
 			const savedTheme = getCookie('theme');
+			const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+			document.documentElement.classList.toggle(
+				'dark',
+				savedTheme ? savedTheme === 'dark' : prefersDarkScheme
+			);
+
+			// Language Logic
 			const savedLanguage = getCookie('language');
-
-			if (savedTheme) {
-				document.documentElement.classList.toggle('dark', savedTheme === 'dark');
-			} else {
-				const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
-				document.documentElement.classList.toggle('dark', prefersDarkScheme);
-			}
-
-			if (savedLanguage) {
-				document.documentElement.setAttribute('lang', savedLanguage);
-			} else {
-				const browserLanguage = navigator.language.startsWith('ru') ? 'ru' : 'en';
-				document.documentElement.setAttribute('lang', browserLanguage);
-			}
+			const browserLanguage = navigator.language.startsWith('ru') ? 'ru' : 'en';
+			document.documentElement.setAttribute('lang', savedLanguage || browserLanguage);
 		})();
 	</script>
 </svelte:head>

@@ -1,5 +1,9 @@
 <script lang="ts">
-	// This is the index route
+	import { language } from '$lib/stores/language';
 </script>
 
-<h1>Welcome to the homepage!</h1>
+<div class="flex h-full w-full flex-col items-center justify-center">
+	<h1 class="text-4xl font-bold">
+		{$language === 'ru' ? 'Добро пожаловать на Главную Страницу!' : 'Welcome to the Home Page!'}
+	</h1>
+</div>
