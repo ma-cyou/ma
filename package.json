@@ -5,13 +5,10 @@
 	"author": "Mapagmataas",
 	"homepage": "https://ma.cyou",
 	"repository": "github:ma-cyou/ma",
+	"main": "package.ts",
 	"files": [
-		"src/lib/**",
-		"!src/lib/components/ui/**"
+		"package.ts"
 	],
-	"exports": {
-    "./": "./src/lib/"
-  },
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
