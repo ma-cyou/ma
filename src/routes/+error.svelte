@@ -15,7 +15,7 @@
 </script>
 
 <div
-	class="absolute inset-0 flex h-full w-full flex-col items-center justify-center bg-gradient-to-b from-white to-blue-200 p-6 text-center dark:from-blue-800 dark:to-blue-950"
+	class="absolute inset-0 flex h-dvh w-full flex-col items-center justify-center bg-gradient-to-b from-white to-blue-200 p-6 text-center dark:from-blue-800 dark:to-blue-950"
 >
 	<div class="mb-8 w-1/2 max-w-lg drop-shadow-xl md:max-w-lg">
 		<Logo class="fill-current text-red-700 dark:text-red-400" />
