@@ -15,11 +15,12 @@
 	import { language } from '$lib/stores/language';
 	import type { Component } from 'svelte';
 
+	let clazz = '';
+	export { clazz as class };
 	export let navLinks: { [key: string]: { name: string; nameRu: string } } = {
 		'/': { name: 'Home', nameRu: 'Главная' }
 	};
 
-	export let type: 'static' | 'fixed' | 'absolute' | 'relative' | 'sticky' = 'sticky';
 	export let title: string = 'macyou';
 	export let titleLink: string = 'https://ma.cyou';
 	export let Logo: Component = defaultLogo;
@@ -33,7 +34,7 @@
 </script>
 
 <header
-	class="{type} top-0 z-40 flex h-14 w-screen items-center gap-2 border-b bg-background px-2 md:h-16 md:gap-4 md:px-4"
+	class="{clazz} sticky inset-0 flex h-14 w-screen items-center gap-2 border-b bg-background px-2 md:h-16 md:gap-4 md:px-4"
 >
 	<nav class="hidden gap-6 text-base font-medium md:flex md:items-center md:gap-4 lg:gap-6">
 		<a href={titleLink} class="flex items-center gap-2 text-lg font-semibold">
