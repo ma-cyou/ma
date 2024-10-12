@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	import Head from '../components/Head.svelte';
-	import Header from '../components/Header.svelte';
+	import Head from '$lib/components/Head.svelte';
+	import Header from '$lib/components/Header.svelte';
 
-	import '../app.scss';
+	import '@/app.scss';
 
 	onMount(() => {
 		console.log('Layout mounted');
@@ -16,3 +16,7 @@
 <Header />
 
 <slot></slot>
+
+<footer>
+	<p>Footer</p>
+</footer>

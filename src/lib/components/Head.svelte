@@ -1,8 +1,3 @@
-<script lang="ts">
-	export const ifOg: boolean = true;
-	export const ifTwitter: boolean = true;
-</script>
-
 <svelte:head>
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	<link rel="icon" type="image/png" href="/favicon.png" media="(prefers-color-scheme: light)" />
@@ -57,25 +52,18 @@
 	<meta name="author" content="Mapagmataas" />
 	<meta name="robots" content="index, follow" />
 
-	{#if ifOg}
-		<meta property="og:title" content="Your Site Title" />
-		<meta property="og:description" content="A brief description of the page for social sharing." />
-		<meta property="og:image" content="/path/to/image.jpg" />
-		<meta property="og:url" content="https://your-site.com" />
-		<meta property="og:type" content="website" />
-		<meta property="og:site_name" content="Your Site Name" />
-	{/if}
+	<meta property="og:title" content="Your Site Title" />
+	<meta property="og:description" content="A brief description of the page for social sharing." />
+	<meta property="og:image" content="/path/to/image.jpg" />
+	<meta property="og:url" content="https://your-site.com" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Your Site Name" />
 
-	{#if ifTwitter}
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:site" content="@yourusername" />
-		<meta name="twitter:title" content="Your Site Title" />
-		<meta
-			name="twitter:description"
-			content="A brief description of the page for Twitter sharing."
-		/>
-		<meta name="twitter:image" content="/path/to/image.jpg" />
-	{/if}
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@yourusername" />
+	<meta name="twitter:title" content="Your Site Title" />
+	<meta name="twitter:description" content="A brief description of the page for Twitter sharing." />
+	<meta name="twitter:image" content="/path/to/image.jpg" />
 
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />

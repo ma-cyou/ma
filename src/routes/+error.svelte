@@ -1,7 +1,11 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { language } from '../stores/language';
-	import Logo from '../components/Logo.svelte';
+	import { language } from '$lib/stores/language';
+
+	import Logo from '$lib/components/Logo.svelte';
+	import ChevronLeft from 'lucide-svelte/icons/chevron-left';
+	import House from 'lucide-svelte/icons/house';
+	import Button from '$lib/components/ui/button/button.svelte';
 
 	let errorStatus: number;
 	let errorMessage: string;
@@ -11,31 +15,37 @@
 </script>
 
 <div
-	class="relative flex h-full w-full flex-col items-center justify-center bg-gradient-to-b from-blue-50 to-blue-100 p-6 text-center dark:from-blue-900 dark:to-blue-800"
+	class="absolute inset-0 flex h-full w-full flex-col items-center justify-center bg-gradient-to-b from-white to-blue-200 p-6 text-center dark:from-blue-800 dark:to-blue-950"
 >
 	<div class="mb-8 w-1/2 max-w-lg drop-shadow-xl md:max-w-lg">
-		<Logo class="fill-current text-red-600 dark:text-red-400" />
+		<Logo class="fill-current text-red-700 dark:text-red-400" />
 	</div>
 
 	<div
-		class="w-full max-w-lg transform rounded-lg bg-white p-10 text-gray-800 shadow-xl backdrop-blur-lg transition-transform hover:scale-105 hover:shadow-2xl dark:bg-gray-800 dark:bg-opacity-80 dark:text-white"
+		class="w-full max-w-lg transform rounded-lg bg-background/25 p-10 text-foreground shadow-xl backdrop-blur-lg transition-transform hover:scale-105 hover:shadow-2xl"
 	>
-		<h1 class="mb-6 text-5xl font-extrabold text-red-600 dark:text-red-400">{errorStatus}</h1>
+		<h1 class="mb-6 text-5xl font-extrabold text-red-700 dark:text-red-400">{errorStatus}</h1>
 		<p class="mb-8 text-xl font-medium">{errorMessage}</p>
 
-		<div class="flex flex-col justify-center space-y-4 md:flex-row md:space-x-6 md:space-y-0">
-			<button
+		<div class="flex flex-row justify-center space-x-6">
+			<Button
 				on:click={() => history.back()}
-				class="rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white shadow-lg transition-colors duration-300 ease-in-out hover:bg-blue-700 hover:shadow-xl dark:bg-blue-500 dark:hover:bg-blue-600"
+				variant="ghost"
+				size="icon"
+				class="shrink-0 hover:bg-blue-200 dark:hover:bg-blue-900"
 			>
-				{$language === 'ru' ? 'Вернуться Назад' : 'Go Back'}
-			</button>
-			<a
+				<ChevronLeft class="h-6 w-6" />
+			</Button>
+			<span class="sr-only">{$language === 'ru' ? 'Назад' : 'Go back'}</span>
+			<Button
+				variant="ghost"
+				size="icon"
+				class="shrink-0 hover:bg-blue-200 dark:hover:bg-blue-900"
 				href="/"
-				class="rounded-lg bg-gray-300 px-6 py-3 font-semibold text-gray-900 shadow-lg transition-colors duration-300 ease-in-out hover:bg-gray-400 hover:shadow-xl dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
 			>
-				{$language === 'ru' ? 'На Главную страницу' : 'Go to Homepage'}
-			</a>
+				<House class="h-6 w-6" />
+			</Button>
+			<span class="sr-only">{$language === 'ru' ? 'На главную' : 'Home'}</span>
 		</div>
 	</div>
 </div>
