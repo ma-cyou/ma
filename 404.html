@@ -1,66 +1,68 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		
-		<link rel="modulepreload" href="/_app/immutable/entry/start.DdCSjjBe.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/entry.BQ_nGhmJ.js">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+		<link rel="modulepreload" href="/_app/immutable/entry/start.1NOe8gc1.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/entry.C6KQT9bC.js">
 		<link rel="modulepreload" href="/_app/immutable/chunks/runtime.BBqc4T_z.js">
-		<link rel="modulepreload" href="/_app/immutable/entry/app.DxM2i2c_.js">
+		<link rel="modulepreload" href="/_app/immutable/entry/app.C_9H5Gdn.js">
 		<link rel="modulepreload" href="/_app/immutable/chunks/index-client.CSMmqrjT.js">
 		<link rel="modulepreload" href="/_app/immutable/chunks/disclose-version.EFR9YhCs.js">
-		<title>macyou</title>
-		<script>
-			(function () {
-				function getCookie(name) {
-					const nameEQ = name + '=';
-					const ca = document.cookie.split(';');
-					for (let i = 0; i < ca.length; i++) {
-						let c = ca[i].trim();
-						if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length);
-					}
-					return null;
+	<title>macyou</title>
+	<script>
+		(function () {
+			function getCookie(name) {
+				const nameEQ = name + '=';
+				const ca = document.cookie.split(';');
+				for (let i = 0; i < ca.length; i++) {
+					let c = ca[i].trim();
+					if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length);
 				}
+				return null;
+			}
 
-				const savedTheme = getCookie('theme');
-				const savedLanguage = getCookie('language');
+			const savedTheme = getCookie('theme');
+			const savedLanguage = getCookie('language');
 
-				if (savedTheme) {
-					document.documentElement.classList.toggle('dark', savedTheme === 'dark');
-				} else {
-					const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
-					document.documentElement.classList.toggle('dark', prefersDarkScheme);
-				}
+			if (savedTheme) {
+				document.documentElement.classList.toggle('dark', savedTheme === 'dark');
+			} else {
+				const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+				document.documentElement.classList.toggle('dark', prefersDarkScheme);
+			}
 
-				if (savedLanguage) {
-					document.documentElement.setAttribute('lang', savedLanguage);
-				} else {
-					const browserLanguage = navigator.language.startsWith('ru') ? 'ru' : 'en';
-					document.documentElement.setAttribute('lang', browserLanguage);
-				}
-			})();
-		</script>
-	</head>
+			if (savedLanguage) {
+				document.documentElement.setAttribute('lang', savedLanguage);
+			} else {
+				const browserLanguage = navigator.language.startsWith('ru') ? 'ru' : 'en';
+				document.documentElement.setAttribute('lang', browserLanguage);
+			}
+		})();
+	</script>
+</head>
 
-	<body class="min-h-[10000px] bg-gray-100 dark:bg-gray-800">
-		<div style="display: contents">
+<body class="min-h-screen bg-gray-100 dark:bg-gray-800">
+	<div style="display: contents">
 			<script>
 				{
-					__sveltekit_1lz8x9u = {
+					__sveltekit_1h5sd85 = {
 						base: ""
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("/_app/immutable/entry/start.DdCSjjBe.js"),
-						import("/_app/immutable/entry/app.DxM2i2c_.js")
+						import("/_app/immutable/entry/start.1NOe8gc1.js"),
+						import("/_app/immutable/entry/app.C_9H5Gdn.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element);
 					});
 				}
 			</script>
 		</div>
-	</body>
+</body>
+
 </html>
