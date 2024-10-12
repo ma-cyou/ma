@@ -6,9 +6,12 @@
 	"homepage": "https://ma.cyou",
 	"repository": "github:ma-cyou/ma",
 	"files": [
-    "src/lib",
-    "!src/lib/components/ui"
-  ],
+		"src/lib/**",
+		"!src/lib/components/ui/**"
+	],
+	"exports": {
+    "./": "./src/lib/"
+  },
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
