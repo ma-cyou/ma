@@ -1,68 +1,35 @@
 <!doctype html>
 <html lang="en">
+	<head>
+		
+		<link rel="modulepreload" href="/_app/immutable/entry/start.CXuL464R.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/entry.ejCLf3H5.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/runtime.CS53C9wL.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/index.DdNy1xr9.js">
+		<link rel="modulepreload" href="/_app/immutable/entry/app.CMiSzAyO.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/disclose-version.BMehhqfr.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/index-client.Cmqk-BKU.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/svelte-component.BuBdJP3K.js">
+	</head>
 
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
-		<link rel="modulepreload" href="/_app/immutable/entry/start.CcUOir6h.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/entry.CtnqMp0z.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/runtime.BBqc4T_z.js">
-		<link rel="modulepreload" href="/_app/immutable/entry/app.CVcS-tTG.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/index-client.CSMmqrjT.js">
-		<link rel="modulepreload" href="/_app/immutable/chunks/disclose-version.EFR9YhCs.js">
-	<title>macyou</title>
-	<script>
-		(function () {
-			function getCookie(name) {
-				const nameEQ = name + '=';
-				const ca = document.cookie.split(';');
-				for (let i = 0; i < ca.length; i++) {
-					let c = ca[i].trim();
-					if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length);
-				}
-				return null;
-			}
-
-			const savedTheme = getCookie('theme');
-			const savedLanguage = getCookie('language');
-
-			if (savedTheme) {
-				document.documentElement.classList.toggle('dark', savedTheme === 'dark');
-			} else {
-				const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
-				document.documentElement.classList.toggle('dark', prefersDarkScheme);
-			}
-
-			if (savedLanguage) {
-				document.documentElement.setAttribute('lang', savedLanguage);
-			} else {
-				const browserLanguage = navigator.language.startsWith('ru') ? 'ru' : 'en';
-				document.documentElement.setAttribute('lang', browserLanguage);
-			}
-		})();
-	</script>
-</head>
-
-<body class="bg-gray-100 dark:bg-gray-800">
-	<div style="display: contents">
+	<body class="bg-gray-100 dark:bg-gray-800">
+		<div style="display: contents">
 			<script>
 				{
-					__sveltekit_x7ktio = {
+					__sveltekit_l0fxjl = {
 						base: ""
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("/_app/immutable/entry/start.CcUOir6h.js"),
-						import("/_app/immutable/entry/app.CVcS-tTG.js")
+						import("/_app/immutable/entry/start.CXuL464R.js"),
+						import("/_app/immutable/entry/app.CMiSzAyO.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element);
 					});
 				}
 			</script>
 		</div>
-</body>
-
+	</body>
 </html>
