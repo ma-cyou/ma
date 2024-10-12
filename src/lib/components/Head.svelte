@@ -83,7 +83,7 @@
 		<meta property="og:description" content={description} />
 		<meta
 			property="og:image"
-			content="https://dynamic-og-image-generator.vercel.app/api/generate?title={description}&author={title}&websiteUrl={url}&avatar=https%3A%2F%2Ftest.ma.cyou%2Fandroid-chrome-512x512-light.png&theme=default"
+			content={`https://dynamic-og-image-generator.vercel.app/api/generate?title=${description}&author=${title}&websiteUrl=${url}&avatar=https%3A%2F%2Ftest.ma.cyou%2Fandroid-chrome-512x512-light.png&theme=default`}
 		/>
 
 		<!-- Twitter Meta Tags -->
@@ -95,7 +95,7 @@
 		<meta name="twitter:alt" content="Twitter Image" />
 		<meta
 			name="twitter:image"
-			content="https://dynamic-og-image-generator.vercel.app/api/generate?title={description}&author={title}&websiteUrl={url}&avatar=https%3A%2F%2Ftest.ma.cyou%2Fandroid-chrome-512x512-light.png&theme=default"
+			content={`https://dynamic-og-image-generator.vercel.app/api/generate?title=${description}&author=${title}&websiteUrl=${url}&avatar=https%3A%2F%2Ftest.ma.cyou%2Fandroid-chrome-512x512-light.png&theme=default`}
 		/>
 	{/if}
 
