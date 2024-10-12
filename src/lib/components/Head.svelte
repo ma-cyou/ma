@@ -77,12 +77,10 @@
 
 	{#if ifOg !== null}
 		<!-- OpenGraph Meta Tags -->
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
 		<meta property="og:url" content={url} />
 		<meta property="og:type" content="website" />
-		<meta property="og:site_name" content={title} />
-		<meta property="og:image:alt" content="OpenGraph Image" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
 		<meta
 			property="og:image"
 			content="https://dynamic-og-image-generator.vercel.app/api/generate?title={description}&author={title}&websiteUrl={url}&avatar=https%3A%2F%2Ftest.ma.cyou%2Fandroid-chrome-512x512-light.png&theme=default"
@@ -90,7 +88,8 @@
 
 		<!-- Twitter Meta Tags -->
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:url" content={url} />
+		<meta property="twitter:domain" content={url.split('/')[2]} />
+		<meta property="twitter:url" content={url} />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:alt" content="Twitter Image" />
