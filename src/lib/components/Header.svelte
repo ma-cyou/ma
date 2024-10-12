@@ -8,21 +8,25 @@
 	import * as Sheet from './ui/sheet/index.js';
 	import { Separator } from '$lib/components/ui/separator/index.js';
 
-	import defaultSettings from './Settings.svelte';
+	import defaultSettings, { type Setting } from './Settings.svelte';
 	import defaultLogo from './Logo.svelte';
 
 	import { page } from '$app/stores';
 	import { language } from '$lib/stores/language';
+	import type { Component } from 'svelte';
 
-	export const navLinks: { [key: string]: { name: string; nameRu: string } } = {
+	export let navLinks: { [key: string]: { name: string; nameRu: string } } = {
 		'/': { name: 'Home', nameRu: 'Главная' }
 	};
 
-	export const type: 'static' | 'fixed' | 'absolute' | 'relative' | 'sticky' = 'sticky';
-	export const Settings: typeof defaultSettings = defaultSettings;
-	export const profile: boolean = true;
-	export const title: string = 'macyou';
-	export const Logo: typeof defaultLogo = defaultLogo;
+	export let type: 'static' | 'fixed' | 'absolute' | 'relative' | 'sticky' = 'sticky';
+	export let title: string = 'macyou';
+	export let titleLink: string = 'https://ma.cyou';
+	export let Logo: Component = defaultLogo;
+	export let additionalSettings: { [key: string]: Setting } | null = null;
+	export let Settings: Component | null = defaultSettings;
+	export let AdditionalSettings: Component | null = null;
+	export let profile: boolean = true;
 
 	let activeLink: string = '';
 	$: activeLink = $page.url.pathname;
@@ -32,7 +36,7 @@
 	class="{type} top-0 z-40 flex h-14 w-screen items-center gap-2 border-b bg-background px-2 md:h-16 md:gap-4 md:px-4"
 >
 	<nav class="hidden gap-6 text-base font-medium md:flex md:items-center md:gap-4 lg:gap-6">
-		<a href="https://ma.cyou" class="flex items-center gap-2 text-lg font-semibold">
+		<a href={titleLink} class="flex items-center gap-2 text-lg font-semibold">
 			<Logo class="h-8 w-8 fill-current text-black dark:text-white" />
 			<p class="pb-0.5">{title}</p>
 		</a>
@@ -67,10 +71,7 @@
 		</div>
 		<Sheet.Content side="left">
 			<nav class="grid gap-6 text-lg font-medium">
-				<a
-					href="https://ma.cyou"
-					class="flex items-center gap-2 text-lg font-semibold md:text-base"
-				>
+				<a href={titleLink} class="flex items-center gap-2 text-lg font-semibold md:text-base">
 					<Logo class="h-8 w-8 fill-current text-black dark:text-white" />
 					<p>{title}</p>
 				</a>
@@ -110,7 +111,14 @@
 							{$language === 'ru' ? 'Настройки' : 'Settings'}
 						</DropdownMenu.Label>
 						<DropdownMenu.Separator />
-						<Settings />
+						{#if additionalSettings !== null}
+							<Settings {additionalSettings} />
+						{:else}
+							<Settings />
+						{/if}
+						{#if AdditionalSettings !== null}
+							<svelte:component this={AdditionalSettings as Component} />
+						{/if}
 					</DropdownMenu.Content>
 				</DropdownMenu.Root>
 			{/if}

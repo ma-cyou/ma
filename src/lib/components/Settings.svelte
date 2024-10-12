@@ -1,43 +1,68 @@
-<script lang="ts">
-	import * as Select from '$lib/components/ui/select/index.js';
-
-	import { theme as themeStore } from '$lib/stores/theme';
-	import { language as languageStore } from '$lib/stores/language';
-	import { onMount } from 'svelte';
-
+<script lang="ts" context="module">
 	interface SelectItem {
 		label: string;
-		ruLabel: string;
+		labelRu: string;
 		value: string;
 	}
 
-	const themes: SelectItem[] = [
-		{ label: 'Light', ruLabel: 'Светлая', value: 'light' },
-		{ label: 'Dark', ruLabel: 'Темная', value: 'dark' }
-	];
-	const languages: SelectItem[] = [
-		{ label: 'English', ruLabel: 'Английский', value: 'en' },
-		{ label: 'Russian', ruLabel: 'Русский', value: 'ru' }
-	];
+	export interface Setting {
+		store: Writable<string>;
+		name: string;
+		nameRu: string;
+		values: SelectItem[];
+	}
+</script>
 
-	$: selectedTheme = themes.find((theme) => theme.value === $themeStore) || themes[0];
-	$: selectedLanguage =
-		languages.find((language) => language.value === $languageStore) || languages[0];
+<script lang="ts">
+	import * as Select from '$lib/components/ui/select/index.js';
 
-	$: updateSelects($languageStore);
+	import { theme } from '$lib/stores/theme';
+	import { language } from '$lib/stores/language';
+	import { onMount } from 'svelte';
+	import type { Writable } from 'svelte/store';
 
-	const updateSelects = (language: string = $languageStore) => {
-		const themeSelect = document.getElementById('theme-select');
-		const languageSelect = document.getElementById('language-select');
-
-		if (themeSelect) {
-			themeSelect.innerHTML = language === 'ru' ? selectedTheme.ruLabel : selectedTheme.label;
+	let settings: { [key: string]: Setting } = {
+		theme: {
+			store: theme,
+			name: 'Theme',
+			nameRu: 'Тема',
+			values: [
+				{ label: 'Light', labelRu: 'Светлая', value: 'light' },
+				{ label: 'Dark', labelRu: 'Темная', value: 'dark' }
+			]
+		},
+		language: {
+			store: language,
+			name: 'Lingo',
+			nameRu: 'Язык',
+			values: [
+				{ label: 'English', labelRu: 'Английский', value: 'en' },
+				{ label: 'Russian', labelRu: 'Русский', value: 'ru' }
+			]
 		}
+	};
 
-		if (languageSelect) {
-			languageSelect.innerHTML =
-				language === 'ru' ? selectedLanguage.ruLabel : selectedLanguage.label;
-		}
+	export let additionalSettings: { [key: string]: Setting } | null = null;
+
+	settings = { ...settings, ...(additionalSettings ?? {}) };
+
+	let selectedValues: { [key: string]: SelectItem } = {};
+	Object.entries(settings).forEach(([key, setting]) => {
+		setting.store.subscribe((storeValue) => {
+			selectedValues[key] =
+				setting.values.find((value) => value.value === storeValue) || setting.values[0];
+		});
+	});
+
+	$: updateSelects(selectedValues, $language);
+
+	const updateSelects = (selected = selectedValues, languageStore = $language) => {
+		Object.entries(settings).forEach(([key]) => {
+			const select = document.getElementById(key + '-select');
+			if (select) {
+				select.innerHTML = languageStore === 'ru' ? selected[key].labelRu : selected[key].label;
+			}
+		});
 	};
 
 	onMount(() => {
@@ -45,51 +70,32 @@
 	});
 </script>
 
-<div class="flex min-w-[240px] flex-col space-y-4 p-2 pb-4 text-sm">
-	<div class="flex items-center space-x-2">
-		<p>{$languageStore === 'ru' ? 'Тема:' : 'Theme:'}</p>
-		<Select.Root
-			selected={selectedTheme}
-			onSelectedChange={(v) => {
-				if (v) themeStore.set(v.value);
-			}}
-		>
-			<Select.Trigger>
-				<Select.Value
-					id="theme-select"
-					placeholder={$languageStore === 'ru' ? 'Выберите Тему' : 'Select Theme'}
-				/>
-			</Select.Trigger>
-			<Select.Content>
-				{#each themes as theme}
-					<Select.Item value={theme.value}>
-						{$languageStore === 'ru' ? theme.ruLabel : theme.label}
-					</Select.Item>
-				{/each}
-			</Select.Content>
-		</Select.Root>
-	</div>
-	<div class="flex items-center space-x-1">
-		<p>{$languageStore === 'ru' ? 'Язык:' : 'Language:'}</p>
-		<Select.Root
-			selected={selectedLanguage}
-			onSelectedChange={(v) => {
-				if (v) languageStore.set(v.value);
-			}}
-		>
-			<Select.Trigger>
-				<Select.Value
-					id="language-select"
-					placeholder={$languageStore === 'ru' ? 'Выберите Язык' : 'Select Language'}
-				/>
-			</Select.Trigger>
-			<Select.Content>
-				{#each languages as lang}
-					<Select.Item value={lang.value}>
-						{$languageStore === 'ru' ? lang.ruLabel : lang.label}
-					</Select.Item>
-				{/each}
-			</Select.Content>
-		</Select.Root>
-	</div>
+<div class="flex min-w-[240px] flex-col space-y-4 px-2 py-4 text-sm">
+	{#each Object.entries(settings) as [key, setting]}
+		<div class="flex items-center space-x-2">
+			<p class="min-w-[48px]">{$language === 'ru' ? setting.nameRu : setting.name}:</p>
+			<Select.Root
+				selected={selectedValues[key]}
+				onSelectedChange={(v) => {
+					if (v) setting.store.set(v.value);
+				}}
+			>
+				<Select.Trigger>
+					<Select.Value
+						id={key + '-select'}
+						placeholder={$language === 'ru'
+							? 'Выберите ' + setting.nameRu
+							: 'Select ' + setting.name}
+					/>
+				</Select.Trigger>
+				<Select.Content>
+					{#each setting.values as value}
+						<Select.Item value={value.value}>
+							{$language === 'ru' ? value.labelRu : value.label}
+						</Select.Item>
+					{/each}
+				</Select.Content>
+			</Select.Root>
+		</div>
+	{/each}
 </div>
