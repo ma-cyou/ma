@@ -16,16 +16,16 @@
 </script>
 
 <div
-	class="flex h-[calc(100dvh_-_3.5rem)] w-full flex-col items-center justify-center bg-gradient-to-b from-white to-blue-200 p-4 text-center dark:from-blue-800 dark:to-blue-950 md:h-[calc(100dvh_-_4rem)]"
+	class="flex h-[calc(100dvh_-_3.5rem)] w-full flex-col items-center justify-center bg-gradient-to-b from-white to-sky-200 p-4 text-center dark:from-sky-800 dark:to-black md:h-[calc(100dvh_-_4rem)]"
 >
 	<div
-		class="mx-8 my-auto w-full min-w-[240px] max-w-lg drop-shadow-xl md:w-2/3 md:min-w-[320px] lg:w-1/2 lg:max-w-xl"
+		class="mx-8 my-auto aspect-square h-[100vw] max-h-[calc((100dvh_-_3.5rem)_/_2)] max-w-full drop-shadow-xl"
 	>
 		<Logo class="fill-current text-red-700 dark:text-red-400" />
 	</div>
 
 	<div
-		class="w-full max-w-lg transform rounded-lg bg-background/25 p-10 text-foreground shadow-xl backdrop-blur-lg transition-transform hover:scale-105 hover:shadow-2xl md:my-auto"
+		class="mb-auto w-full max-w-lg transform rounded-lg bg-background/25 p-4 shadow-xl backdrop-blur-lg transition-transform hover:scale-105 hover:shadow-2xl md:my-auto md:p-8"
 	>
 		<h1 class="mb-6 text-4xl font-extrabold text-red-700 dark:text-red-400 md:text-5xl">
 			{errorStatus}
