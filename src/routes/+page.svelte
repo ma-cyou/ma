@@ -5,12 +5,9 @@
 </script>
 
 <div
-	class="h-full w-full snap-y snap-mandatory justify-center bg-gradient-to-br from-white to-blue-200 dark:from-blue-800 dark:to-blue-950"
+	class="w-full snap-y snap-mandatory justify-center overflow-y-scroll scroll-smooth bg-gradient-to-br from-white to-blue-200 dark:from-blue-800 dark:to-blue-950"
 >
-	<section
-		id="hero"
-		class="flex h-[calc(100dvh_-_3.5rem)] snap-start items-center justify-center md:h-[calc(100dvh_-_4rem)]"
-	>
+	<section id="hero" class="flex snap-start items-center justify-center">
 		<div class="text-center">
 			<h1 class="flex text-4xl font-bold md:text-5xl">
 				{#if $language === 'ru'}
@@ -48,7 +45,7 @@
 	</section>
 	<section
 		id="about"
-		class="text-s flex h-dvh snap-start flex-col items-center justify-center text-xs leading-normal tracking-tight md:text-base md:leading-relaxed md:tracking-normal"
+		class="text-s flex snap-start flex-col items-center justify-center text-xs leading-normal tracking-tight md:text-base md:leading-relaxed md:tracking-normal"
 	>
 		<div class="container">
 			<h1 class="scroll-m-20 text-2xl font-extrabold tracking-tight md:text-4xl lg:text-5xl">
@@ -280,7 +277,7 @@
 			</div>
 		</div>
 	</section>
-	<section id="contact" class="flex h-dvh snap-start flex-col items-center justify-center">
+	<section id="contact" class="flex snap-start flex-col items-center justify-center">
 		<div class="container mx-auto text-center">
 			<h2 class="text-4xl font-bold">Связаться со мной</h2>
 			<form class="mt-8 space-y-4">
@@ -309,5 +306,10 @@
 <style lang="scss">
 	a {
 		@apply underline-offset-4 hover:underline;
+	}
+
+	.snap-y,
+	.snap-start {
+		@apply h-[calc(100dvh_-_3.5rem)] md:h-[calc(100dvh_-_4rem)];
 	}
 </style>
