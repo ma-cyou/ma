@@ -4,11 +4,7 @@
 	"description": "Mapagmataas' website",
 	"author": "Mapagmataas",
 	"homepage": "https://ma.cyou",
-	"repository": "github:ma-cyou/ma",
-	"main": "package.ts",
-	"files": [
-		"package.ts"
-	],
+	"repository": "github:mapagmataas1331/ma",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",

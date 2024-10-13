@@ -34,7 +34,9 @@
 </script>
 
 <header
-	class="{clazz} sticky inset-0 flex h-14 w-screen items-center gap-2 border-b bg-background px-2 md:h-16 md:gap-4 md:px-4"
+	class="{clazz !== ''
+		? ' ' + clazz
+		: ''}sticky inset-0 flex h-14 w-screen items-center gap-2 border-b bg-background px-2 md:h-16 md:gap-4 md:px-4"
 >
 	<nav class="hidden gap-6 text-base font-medium md:flex md:items-center md:gap-4 lg:gap-6">
 		<a href={titleLink} class="flex items-center gap-2 text-lg font-semibold">

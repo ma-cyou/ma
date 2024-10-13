@@ -16,7 +16,7 @@
 </script>
 
 <div
-	class="flex h-full w-full flex-col items-center justify-center bg-gradient-to-b from-white to-blue-200 p-4 text-center dark:from-blue-800 dark:to-blue-950"
+	class="flex h-[calc(100dvh_-_3.5rem)] w-full flex-col items-center justify-center bg-gradient-to-b from-white to-blue-200 p-4 text-center dark:from-blue-800 dark:to-blue-950 md:h-[calc(100dvh_-_4rem)]"
 >
 	<div
 		class="mx-8 my-auto w-full min-w-[240px] max-w-lg drop-shadow-xl md:w-2/3 md:min-w-[320px] lg:w-1/2 lg:max-w-xl"
