@@ -2,7 +2,7 @@
 	import Github from 'lucide-svelte/icons/github';
 	import Send from 'lucide-svelte/icons/send';
 
-	import HoverCard from '$lib/components/HoverCard.svelte';
+	import HoverCard from '$lib/shared/components/HoverCard.svelte';
 	import Button from '$lib/components/ui/button/button.svelte';
 	import * as Tooltip from '$lib/components/ui/tooltip';
 

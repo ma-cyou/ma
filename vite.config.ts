@@ -1,11 +1,13 @@
 import { defineConfig } from 'vitest/config';
 import { sveltekit } from '@sveltejs/kit/vite';
+import path from 'path';
 
 export default defineConfig({
 	plugins: [sveltekit()],
 	resolve: {
 		alias: {
-			'@': '/src'
+			$lib: path.resolve('./src/lib'),
+			$shared: path.resolve('./src/lib/shared')
 		}
 	},
 	css: {
