@@ -22,23 +22,30 @@
 			>
 				{#if $language === 'ru'}
 					<div class="flex items-center justify-center">
-						Привет <button
-							class="cursor-grab hover:scale-110"
+						<div>
+							Привет
+							<button
+								class="-ml-2 -mr-3 cursor-grab hover:scale-110 sm:-ml-3 sm:-mr-5"
+								on:click={(e) => easterEgg(e.target as HTMLElement)}
+							>
+								👋
+							</button>
+							,
+						</div>
+					</div>
+					<div class="ml-0 text-2xl sm:ml-2 sm:text-4xl md:text-5xl">я автор</div>
+				{:else}
+					<div>
+						Hi
+						<button
+							class="-ml-2 -mr-3 cursor-grab hover:scale-110 sm:-ml-3 sm:-mr-4 md:-ml-4 md:-mr-5"
 							on:click={(e) => easterEgg(e.target as HTMLElement)}
 						>
 							👋
 						</button>
 						,
 					</div>
-					<p>я автор</p>
-				{:else}
-					Hi <button
-						class="cursor-grab hover:scale-110"
-						on:click={(e) => easterEgg(e.target as HTMLElement)}
-					>
-						👋
-					</button>
-					, I am the author
+					<div class="ml-0 text-2xl sm:ml-2 sm:text-4xl md:text-5xl">I am the author</div>
 				{/if}
 			</h1>
 			<p class="mt-2 text-base sm:mt-5 md:text-lg">
