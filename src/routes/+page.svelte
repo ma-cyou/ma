@@ -25,7 +25,7 @@
 						<div>
 							Привет
 							<button
-								class="-ml-2 -mr-3 cursor-grab hover:scale-110 sm:-ml-3 sm:-mr-5"
+								class="-mx-1 cursor-grab hover:scale-110 sm:-mx-2 md:-mx-3"
 								on:click={(e) => easterEgg(e.target as HTMLElement)}
 							>
 								👋
@@ -38,7 +38,7 @@
 					<div>
 						Hi
 						<button
-							class="-ml-2 -mr-3 cursor-grab hover:scale-110 sm:-ml-3 sm:-mr-4 md:-ml-4 md:-mr-5"
+							class="-mx-1 cursor-grab hover:scale-110 sm:-mx-2 md:-mx-3"
 							on:click={(e) => easterEgg(e.target as HTMLElement)}
 						>
 							👋
