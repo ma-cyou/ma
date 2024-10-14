@@ -9,9 +9,9 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"deploy": "vite build && gh-pages -d build -t true",
-		"preview": "vite build && vite preview",
-		"previewGh": "vite build && http-server build",
+		"deploy": "gh-pages -d build -t true",
+		"preview": "vite preview",
+		"preview:gh": "http-server build",
 		"validate": "npm run check && prettier --write . && eslint .",
 		"test": "npm run test:integration && npm run test:unit && npm run test:e2e && npm run test:unit -- --run",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",

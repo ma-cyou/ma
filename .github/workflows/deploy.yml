@@ -27,13 +27,7 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Configure Git identity
-        run: |
-          git config --global user.name "ma-cyou"
-          git config --global user.email "dev.ma.cyou@gmail.com"
-
       - name: Deploy to GitHub Pages
-        run: |
-          npx gh-pages -d build -t true -r https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/ma-cyou/ma.git
+        run: npm run deploy -u "ma-cyou <dev.ma.cyou@gmail.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
