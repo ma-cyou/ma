@@ -33,7 +33,7 @@
 								class="-mx-1 cursor-grab hover:scale-110 sm:-mx-2 md:-mx-3"
 								on:click={(e) => easterEgg(e.target as HTMLElement)}
 							>
-								👋h
+								👋
 							</button>
 							,
 						</div>
@@ -46,7 +46,7 @@
 							class="-mx-1 cursor-grab hover:scale-110 sm:-mx-2 md:-mx-3"
 							on:click={(e) => easterEgg(e.target as HTMLElement)}
 						>
-							👋h
+							👋
 						</button>
 						,
 					</div>
