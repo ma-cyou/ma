@@ -1,6 +1,11 @@
 <script lang="ts">
+	import Github from 'lucide-svelte/icons/github';
+	import Send from 'lucide-svelte/icons/send';
+
 	import HoverCard from '$lib/components/HoverCard.svelte';
 	import Button from '$lib/components/ui/button/button.svelte';
+	import * as Tooltip from '$lib/components/ui/tooltip';
+
 	import { language } from '$lib/stores/language';
 	import { theme } from '$lib/stores/theme';
 
@@ -15,7 +20,7 @@
 <div
 	class="w-full snap-y snap-mandatory justify-center overflow-y-scroll scroll-smooth bg-gradient-to-br from-white to-sky-200 dark:from-sky-800 dark:to-black"
 >
-	<section id="hero" class="relative z-20 flex snap-start items-center justify-center">
+	<section class="relative z-20 flex snap-start items-center justify-center">
 		<div class="text-center">
 			<h1
 				class="block items-center justify-center text-3xl font-bold sm:flex sm:text-4xl md:text-5xl"
@@ -65,14 +70,14 @@
 					variant="default"
 					class="m-2 min-w-48 font-semibold shadow-lg hover:scale-105"
 				>
-					{$language === 'ru' ? 'Узнать больше' : 'Learn more'}
+					{$language === 'ru' ? 'Больше обо мне' : 'More about me'}
 				</Button>
 				<Button
-					href="#contact"
+					href="#socials"
 					variant="default"
 					class="m-2 min-w-48 font-semibold shadow-lg hover:scale-105"
 				>
-					{$language === 'ru' ? 'Связаться со мной' : 'Contact me'}
+					{$language === 'ru' ? 'Мои Соц. сети' : 'My Social links'}
 				</Button>
 			</div>
 		</div>
@@ -311,28 +316,44 @@
 			</div>
 		</div>
 	</section>
-	<section id="contact" class="relative z-20 flex snap-start flex-col items-center justify-center">
+	<section id="socials" class="relative z-20 flex snap-start flex-col items-center justify-center">
 		<div class="container mx-auto text-center">
-			<h2 class="text-4xl font-bold">Связаться со мной</h2>
-			<form class="mt-8 space-y-4">
-				<input
-					type="text"
-					placeholder="Ваше имя"
-					class="w-full rounded-lg bg-gray-800 px-4 py-2 text-white focus:outline-none"
-				/>
-				<input
-					type="email"
-					placeholder="Ваш email"
-					class="w-full rounded-lg bg-gray-800 px-4 py-2 text-white focus:outline-none"
-				/>
-				<textarea
-					placeholder="Ваше сообщение"
-					class="h-32 w-full rounded-lg bg-gray-800 px-4 py-2 text-white focus:outline-none"
-				></textarea>
-				<button class="w-full rounded-lg bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-500"
-					>Отправить</button
-				>
-			</form>
+			<h2 class="text-4xl font-bold">{$language === 'ru' ? 'Мои Соц. сети' : 'My Social links'}</h2>
+			<div class="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
+				<Tooltip.Root>
+					<Tooltip.Trigger class="sm:text-right">
+						<Button
+							href="https://github.com/mapagmataas1331"
+							variant="default"
+							target="_blank"
+							class="m-2 min-w-48 font-semibold shadow-lg hover:scale-105"
+						>
+							<Github class="mr-2 h-6 w-6" />
+							@mapagmataas1331
+						</Button>
+					</Tooltip.Trigger>
+					<Tooltip.Content>
+						<p>GitHub</p>
+					</Tooltip.Content>
+				</Tooltip.Root>
+
+				<Tooltip.Root>
+					<Tooltip.Trigger class="sm:text-left">
+						<Button
+							href="https://t.me/mapagmataas"
+							variant="default"
+							target="_blank"
+							class="m-2 min-w-48 font-semibold shadow-lg hover:scale-105"
+						>
+							<Send class="mr-2 h-6 w-6" />
+							@mapagmataas
+						</Button>
+					</Tooltip.Trigger>
+					<Tooltip.Content>
+						<p>Telegram</p>
+					</Tooltip.Content>
+				</Tooltip.Root>
+			</div>
 		</div>
 	</section>
 </div>

@@ -6,6 +6,7 @@
 	import { Button } from './ui/button/index.js';
 	import * as DropdownMenu from './ui/dropdown-menu/index.js';
 	import * as Sheet from './ui/sheet/index.js';
+	import * as Avatar from './ui/avatar/index.js';
 	import { Separator } from '$lib/components/ui/separator/index.js';
 
 	import defaultSettings, { type Setting } from './Settings.svelte';
@@ -98,7 +99,7 @@
 		</Sheet.Content>
 	</Sheet.Root>
 	{#if Settings !== null || profile !== null}
-		<div class="ml-auto flex items-end items-center gap-2 md:gap-2 lg:gap-4">
+		<div class="ml-auto flex items-center gap-2 md:gap-2 lg:gap-4">
 			{#if Settings !== null}
 				<DropdownMenu.Root>
 					<DropdownMenu.Trigger asChild let:builder>
@@ -128,7 +129,16 @@
 			{#if profile}
 				<DropdownMenu.Root>
 					<DropdownMenu.Trigger asChild let:builder>
-						<Button builders={[builder]} variant="secondary" size="icon" class="rounded-full">
+						<Button
+							builders={[builder]}
+							variant="secondary"
+							size="icon"
+							class="animate-pulse rounded-full"
+						>
+							<!-- <Avatar.Root class="h-9 w-9">
+								<Avatar.Image src="https://github.com/mapagmataas1331.png" alt="@mapagmataas1331" />
+								<Avatar.Fallback>CN</Avatar.Fallback>
+							</Avatar.Root> -->
 							<CircleUser class="h-5 w-5" />
 							<span class="sr-only">
 								{$language === 'ru' ? 'Показать меню пользователя' : 'Toggle user menu'}
@@ -140,10 +150,9 @@
 							{$language === 'ru' ? 'Меню пользователя' : 'User menu'}
 						</DropdownMenu.Label>
 						<DropdownMenu.Separator />
-						<DropdownMenu.Item>Profile</DropdownMenu.Item>
-						<DropdownMenu.Item>My Orders</DropdownMenu.Item>
+						<DropdownMenu.Item>{$language === 'ru' ? 'Профиль' : 'Profile'}</DropdownMenu.Item>
 						<DropdownMenu.Separator />
-						<DropdownMenu.Item>Logout</DropdownMenu.Item>
+						<DropdownMenu.Item>{$language === 'ru' ? 'Выход' : 'Logout'}</DropdownMenu.Item>
 					</DropdownMenu.Content>
 				</DropdownMenu.Root>
 			{/if}
