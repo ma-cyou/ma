@@ -1,18 +1,31 @@
 # [ma.cyou](https://ma.cyou)
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Functional Description](#functional-description)
+- [Icons Created by the Author](#icons-created-by-the-author)
+  - [Icon Copyright](#icon-copyright)
+    - [Favicon Details](#favicon-details)
+    - [Reservation of Rights](#reservation-of-rights)
+    - [License for Idea Inspiration (Non-Commercial Use)](#license-for-idea-inspiration-non-commercial-use)
+- [Contact](#contact)
+
+---
+
 ## Overview
 
-This is my personal resume website, showcasing my skills, experience, and projects. It serves as a digital portfolio that highlights my journey as a developer and provides a platform for others to learn more about my work.
+This is my personal resume website, showcasing my skills, experience, and projects. It serves as a digital portfolio, providing a platform for others to learn more about my work as a developer and the journey I’ve taken. The website highlights various aspects of my career, technical expertise, and creative endeavors.
 
 ## Functional Description
 
-This website is built using [**SvelteKit**](https://kit.svelte.dev/), a modern web framework that offers fast and dynamic interfaces. The UI design is based on a port of the popular [**shadcn UI**](https://ui.shadcn.com/) for Svelte, which can be found at [shadcn-svelte.com](https://www.shadcn-svelte.com). The site combines a minimalistic aesthetic with functional and interactive components to deliver a smooth user experience.
+This website is built using [**SvelteKit**](https://kit.svelte.dev/), a modern web framework that delivers fast and dynamic interfaces with minimal effort. The UI design is based on a port of the popular [**shadcn UI**](https://ui.shadcn.com/) for Svelte, available at [shadcn-svelte.com](https://www.shadcn-svelte.com). The site combines a minimalistic aesthetic with functional, interactive components for a seamless user experience.
 
 ---
 
 ## Icons Created by the Author
 
-Favicon for this project, was designed and created by me, Mapagmataas. This icon, while not registered with a copyright office, is automatically protected under international copyright law. This means that, by default, I hold the rights to this icon as the original creator.
+The favicon for this project was designed and created by me, **Mapagmataas**. Although this icon is not registered with any copyright office, it is automatically protected under international copyright law. As the original creator, I hold full rights to the icon, ensuring that others cannot use or replicate the design without permission.
 
 ### Icon Copyright
 
@@ -22,28 +35,32 @@ Favicon for this project, was designed and created by me, Mapagmataas. This icon
 - **Created by**: [Mapagmataas](https://github.com/mapagmataas1331)
 - **Year of Creation**: 2024
 - **Project**: [ma.cyou](https://ma.cyou)
-- **Rights Reserved**: All rights to the favicon design are reserved by me, ensuring that the original design cannot be replicated or used by others without permission.
+- **Rights Reserved**: All rights to the favicon design are reserved by me, ensuring that the original design cannot be copied, modified, or used by others without my explicit permission.
 
 #### Reservation of Rights
 
-I retain full ownership of the design of my self-made favicon, as well as any other icons created by me for my projects. While others are free to explore and be inspired by the ideas behind the icon design, **no part of the design itself may be copied, modified, or used commercially without my explicit written permission**.
+I retain full ownership of my self-designed favicon and any other icons I create for this or future projects. Others are welcome to draw inspiration from the icon concept, but **no part of the design may be copied, modified, or used for commercial purposes without my express written consent**.
 
 - **Copyright Notice**:  
   `© ma.cyou (Mapagmataas), 2024. All rights reserved.`  
-  This copyright notice reserves all rights for the use, distribution, and reproduction of my icon designs. Unauthorized usage is strictly prohibited.
+  This copyright notice ensures that all rights for the use, distribution, and reproduction of my icon designs are reserved. Any unauthorized usage is strictly prohibited.
 
 - **Legal Protection**:  
-  The icon is protected under international copyright laws, meaning any unauthorized reproduction, distribution, or commercial use of the icon could result in legal action.
+  The icon is protected under international copyright laws. Unauthorized reproduction, distribution, or commercial use of the icon may result in legal action.
 
-### License for Idea Inspiration (Non-Commercial Use)
+#### License for Idea Inspiration (Non-Commercial Use)
 
-I welcome others to get ideas from my icon design under the following conditions:
+I encourage others to use the **idea** behind my icon design in their personal, non-commercial projects under the following conditions:
 
-- **Idea Use**: You may use the concept or be inspired by the icon for personal, non-commercial projects.
+- **Permitted Uses**: Feel free to get inspired by the icon design concept for personal or non-commercial projects.
 - **Restrictions**:
-  - **No Direct Copying**: You may not directly copy or modify the design.
-  - **No Commercial Use**: The icon design cannot be used for commercial purposes.
+  - **No Direct Copying**: The actual design may not be copied or modified in any way.
+  - **No Commercial Use**: The design cannot be used for any commercial purposes without explicit permission.
 
-If you would like to license the icon for commercial use or have any other inquiries, please contact me at [your email address] or through my website's contact form.
+If you are interested in licensing the icon for commercial use or have any questions, please contact me.
 
 ---
+
+## Contact
+
+For any inquiries about the website or the use of icons, please reach out throw my socials which can be found on [ma.cyou#socials](https://ma.cyou#socials).
