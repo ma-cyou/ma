@@ -34,6 +34,7 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: |
-          npx gh-pages -d build -t true -r https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/ma-cyou/ma.git
+          npx gh-pages -d build -t true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_USER: 'github-actions[bot]'
