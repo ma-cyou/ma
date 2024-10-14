@@ -27,6 +27,8 @@ This website is built using [**SvelteKit**](https://kit.svelte.dev/), a modern w
 
 The favicon for this project was designed and created by me, **Mapagmataas**. Although this icon is not registered with any copyright office, it is automatically protected under international copyright law. As the original creator, I hold full rights to the icon, ensuring that others cannot use or replicate the design without permission.
 
+![Svg Icon](https://test.ma.cyou/favicon.svg)
+
 ### Icon Copyright
 
 #### Favicon Details
