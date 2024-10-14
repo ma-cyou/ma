@@ -2,12 +2,12 @@
 	import Github from 'lucide-svelte/icons/github';
 	import Send from 'lucide-svelte/icons/send';
 
-	import HoverCard from '$lib/shared/components/HoverCard.svelte';
-	import Button from '$lib/components/ui/button/button.svelte';
-	import * as Tooltip from '$lib/components/ui/tooltip';
+	import HoverCard from '$shared/components/HoverCard.svelte';
+	import Button from '$shared/components/ui/button/button.svelte';
+	import * as Tooltip from '$shared/components/ui/tooltip';
 
-	import { language } from '$lib/stores/language';
-	import { theme } from '$lib/stores/theme';
+	import { language } from '$shared/stores/language';
+	import { theme } from '$shared/stores/theme';
 
 	const easterEgg = (target: HTMLElement) => {
 		target.innerHTML = '👀';

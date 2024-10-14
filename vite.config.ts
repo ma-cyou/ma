@@ -6,6 +6,7 @@ export default defineConfig({
 	plugins: [sveltekit()],
 	resolve: {
 		alias: {
+			'@': path.resolve('./src'),
 			$lib: path.resolve('./src/lib'),
 			$shared: path.resolve('./src/lib/shared')
 		}
