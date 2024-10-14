@@ -31,10 +31,10 @@ The favicon for this project was designed and created by me, **Mapagmataas**. Al
 
 #### Favicon Details
 
-- **Icon File**: [`./static/favicon.svg`](https://github.com/mapagmataas1331/ma/blob/main/static/favicon.svg) and [https://ma.cyou/favicon.svg](https://ma.cyou/favicon.svg)
+- **Icon File**: [`./static/favicon.svg`](https://github.com/mapagmataas1331/ma/blob/main/static/favicon.svg) and [ma.cyou/favicon.svg](https://ma.cyou/favicon.svg)
 - **Created by**: [Mapagmataas](https://github.com/mapagmataas1331)
 - **Year of Creation**: 2024
-- **Project**: [`Mapagmataas1331/ma`](https://github.com/mapagmataas1331/ma) and [ma.cyou](https://ma.cyou)
+- **Project**: [Mapagmataas1331/ma](https://github.com/mapagmataas1331/ma) and [ma.cyou](https://ma.cyou)
 - **Rights Reserved**: All rights to the favicon design are reserved by me, ensuring that the original design cannot be copied, modified, or used by others without my explicit permission.
 
 #### Reservation of Rights
