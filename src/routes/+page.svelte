@@ -58,7 +58,7 @@
 			</p>
 			<img
 				src="/author.png"
-				alt="Фото автора"
+				alt={$language === 'ru' ? 'Фото Aвтора' : "Author's photo"}
 				class="mx-auto mt-5 flex h-full max-h-[calc((100dvh_-_3.5rem)_/_2)] min-h-48 items-center justify-center rounded-3xl shadow-xl transition-transform hover:scale-105 sm:mt-10 md:max-h-[calc((100dvh_-_4rem)_/_2)] {$theme ===
 				'dark'
 					? 'pattern-light'
