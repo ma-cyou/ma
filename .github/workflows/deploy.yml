@@ -10,27 +10,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout the repository
         uses: actions/checkout@v4
         with:
           submodules: true
           fetch-depth: 0
 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
+
+      - name: Setup Git User Identity
+        run: |
+          git config --global user.name "ma-cyou"
+          git config --global user.email "dev.ma.cyou@gmail.com"
 
       - name: Install dependencies
         run: npm install
 
       - name: Build project
         run: npm run build
-
-      - name: Configure Git
-        run: |
-          git config --local user.email "dev.ma.cyou@gmail.com"
-          git config --local user.name "ma-cyou"
 
       - name: Deploy to GitHub Pages
         run: |
