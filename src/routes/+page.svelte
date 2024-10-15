@@ -86,7 +86,7 @@
 		id="about"
 		class="relative z-10 flex snap-start flex-col items-center justify-center text-xs leading-normal tracking-tight md:text-base md:leading-relaxed md:tracking-normal"
 	>
-		<div class="container z-10">
+		<div class="container z-10 max-h-full">
 			<h1 class="scroll-m-20 text-2xl font-extrabold tracking-tight md:text-4xl lg:text-5xl">
 				{$language === 'ru' ? 'Обо мне' : 'About me'}
 			</h1>
@@ -96,6 +96,7 @@
 						<li>
 							<p>
 								Меня зовут Тимофей, мой ник — "Mapagmataas". В настоящий момент я работаю в <HoverCard
+									class="font-semibold italic"
 									link="https://www.inp.nsk.su/"
 									name="ИЯФ"
 									img="https://inp.nsk.su/images/logo/OfficiallogoBINPblueClear.gif"
@@ -122,6 +123,7 @@
 									href="https://wikipedia.org/wiki/TypeScript"
 									target="_blank">TypeScript</a
 								>, в моем любимом фреймворке <HoverCard
+									class="font-semibold italic"
 									link="https://svelte.dev/"
 									name="Svelte"
 									img="https://github.com/sveltejs.png"
@@ -129,6 +131,7 @@
 									title="SVELTE"
 									description="Кибернетически улучшенные веб-приложения."
 								/>, а также <HoverCard
+									class="font-semibold italic"
 									link="https://react.dev/"
 									name="React"
 									img="https://github.com/reactjs.png"
@@ -145,6 +148,7 @@
 								<a href="https://wikipedia.org/wiki/C_Sharp_(programming_language)" target="_blank"
 									>C#</a
 								>, <a href="https://wikipedia.org/wiki/C++" target="_blank">C++</a>, <HoverCard
+									class="font-semibold italic"
 									link="https://www.rust-lang.org/"
 									name="Rust"
 									img="https://github.com/rust-lang.png"
@@ -179,6 +183,7 @@
 								<a href="https://wikipedia.org/wiki/Redis" target="_blank">Redis</a>
 								и <a href="https://wikipedia.org/wiki/MongoDB" target="_blank">MongoDB</a>. Для
 								повседневных задач я использую <HoverCard
+									class="font-semibold italic"
 									link="https://www.python.org/"
 									name="Python"
 									img="https://github.com/python.png"
@@ -186,6 +191,7 @@
 									title="Python"
 									description="язык программирования, который позволяет работать быстро и более эффективно интегрировать программы."
 								/> или <HoverCard
+									class="font-semibold italic"
 									link="https://go.dev/"
 									name="Golang"
 									img="https://github.com/golang.png"
@@ -206,6 +212,7 @@
 							<p>
 								My name is Timofey, and my nickname is "Mapagmataas". Currently, I work as a lab
 								technician at <HoverCard
+									class="font-semibold italic"
 									link="https://www.inp.nsk.su/"
 									name="BINP"
 									img="https://inp.nsk.su/images/logo/OfficiallogoBINPblueClear.gif"
@@ -232,6 +239,7 @@
 									href="https://wikipedia.org/wiki/TypeScript"
 									target="_blank">TypeScript</a
 								>, my favorite framework <HoverCard
+									class="font-semibold italic"
 									link="https://svelte.dev/"
 									name="Svelte"
 									img="https://github.com/sveltejs.png"
@@ -239,6 +247,7 @@
 									title="SVELTE"
 									description="Cybernetically enhanced web apps."
 								/>, and also <HoverCard
+									class="font-semibold italic"
 									link="https://react.dev/"
 									name="React"
 									img="https://github.com/reactjs.png"
@@ -257,6 +266,7 @@
 									>C#</a
 								>,
 								<a href="https://wikipedia.org/wiki/C++" target="_blank">C++</a>, <HoverCard
+									class="font-semibold italic"
 									link="https://www.rust-lang.org/"
 									name="Rust"
 									img="https://github.com/rust-lang.png"
@@ -291,6 +301,7 @@
 								<a href="https://wikipedia.org/wiki/Redis" target="_blank">Redis</a>, and
 								<a href="https://wikipedia.org/wiki/MongoDB" target="_blank">MongoDB</a>. For
 								everyday tasks, I use <HoverCard
+									class="font-semibold italic"
 									link="https://www.python.org/"
 									name="Python"
 									img="https://github.com/python.png"
@@ -298,6 +309,7 @@
 									title="Python"
 									description="A programming language that lets you work quickly and integrate systems more effectively."
 								/> or <HoverCard
+									class="font-semibold italic"
 									link="https://go.dev/"
 									name="Golang"
 									img="https://github.com/golang.png"
@@ -354,13 +366,17 @@
 					</Tooltip.Content>
 				</Tooltip.Root>
 			</div>
+			<p class="absolute bottom-0 left-0 right-0 p-2 text-center text-xs backdrop-blur-sm">
+				© ma.cyou (<a href="https://github.com/mapagmataas1331" target="_blank">Mapagmataas</a>),
+				2024. All rights reserved.
+			</p>
 		</div>
 	</section>
 </div>
 
 <style lang="scss">
 	a {
-		@apply underline-offset-4 hover:underline;
+		@apply font-semibold italic hover:underline;
 	}
 
 	.snap-y,
