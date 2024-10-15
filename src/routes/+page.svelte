@@ -64,7 +64,7 @@
 					? 'pattern-light'
 					: 'pattern'}"
 			/>
-			<div class="mt-5 flex flex-col sm:mt-10 md:flex-row">
+			<div class="mt-5 flex flex-col items-center justify-center sm:mt-10 md:flex-row">
 				<Button
 					href="#about"
 					variant="default"
