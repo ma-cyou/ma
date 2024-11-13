@@ -24,6 +24,7 @@
 				<Avatar.Image
 					src="/favicon.svg"
 					alt={$language === 'ru' ? 'Анашин Тимофей' : 'Anashin Timofey'}
+					class="invert dark:invert-0"
 				/>
 				<Avatar.Fallback>{$language === 'ru' ? 'АТ' : 'AT'}</Avatar.Fallback>
 			</Avatar.Root>
