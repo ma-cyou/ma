@@ -1,0 +1,1 @@
+import{a as r,t}from"../chunks/disclose-version.jFYi3EAR.js";import"../chunks/language.CH0qDJS0.js";var s=t('<div class="w-full snap-y snap-mandatory justify-center overflow-y-scroll scroll-smooth bg-gradient-to-br from-white to-sky-200 dark:from-sky-800 dark:to-black"></div>');function n(o){var a=s();r(o,a)}export{n as component};

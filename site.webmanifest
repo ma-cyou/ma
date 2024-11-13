@@ -1,6 +1,6 @@
 {
-  "name": "ma.cyou",
-  "short_name": "macyou",
+  "name": "test.ma.cyou",
+  "short_name": "test-macyou",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
