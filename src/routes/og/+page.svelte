@@ -4,7 +4,7 @@
 	import { Button } from '$shared/components/ui/button/index.js';
 	import { language } from '$shared/stores/language';
 
-	const url = 'http://localhost/';
+	const url = 'https://api.ma.cyou/og/';
 	let icon = $state('https://ma.cyou/favicon.svg');
 	let title = $state('macyou');
 	let description = $state(
@@ -13,7 +13,9 @@
 	let website = $state('https://ma.cyou/');
 
 	let result = $derived(
-		encodeURI(`${url}api/og?c=${icon}&y=${title}&o=${description}&u=${website}`)
+		icon && title && description && website
+			? encodeURI(`${url}?c=${icon}&y=${title}&o=${description}&u=${website}`)
+			: url
 	);
 </script>
 
@@ -47,7 +49,11 @@
 		class="mb-2 bg-background"
 		bind:value={website}
 	/>
-	<Button variant="outline" class="mb-2" onclick={() => navigator.clipboard.writeText(result)}>
+	<Button
+		variant="outline"
+		class="mb-2 h-auto whitespace-pre-wrap break-all"
+		onclick={() => navigator.clipboard.writeText(result)}
+	>
 		{result}
 	</Button>
 
