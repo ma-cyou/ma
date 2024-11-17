@@ -3,8 +3,9 @@
 	import * as Card from '$shared/components/ui/card/index.js';
 	import { Input } from '$shared/components/ui/input/index.js';
 	import { Textarea } from '$shared/components/ui/textarea/index.js';
-	import { Button } from '$shared/components/ui/button/index.js';
+	import { buttonVariants } from '$shared/components/ui/button/index.js';
 	import { Label } from '$shared/components/ui/label/index.js';
+	import * as Tooltip from '$shared/components/ui/tooltip/index.js';
 	import { language } from '$shared/stores/language';
 
 	const url = 'https://api.ma.cyou/og/';
@@ -32,18 +33,24 @@
 	}
 
 	let resultUrl = $derived(
-		icon || title || description || website
-			? `${url}?c=${encodeUTF8toBase64(icon)}&y=${encodeUTF8toBase64(title)}&o=${encodeUTF8toBase64(website)}&u=${encodeUTF8toBase64(description)}`
+		icon || title || website || description
+			? `${url}?${icon ? 'c=' + encodeUTF8toBase64(icon) + '&' : ''}${title ? 'y=' + encodeUTF8toBase64(title) + '&' : ''}${website ? 'o=' + encodeUTF8toBase64(website) + '&' : ''}${description ? 'u=' + encodeUTF8toBase64(description) : ''}`
 			: url
 	);
+
+	let imageResultUrl = $state(
+		'https://api.ma.cyou/og/?c=aHR0cHM6Ly9tYS5jeW91L2Zhdmljb24uc3Zn&y=bWFjeW91&o=aHR0cHM6Ly9tYS5jeW91Lw==&u=VGhpcyBpcyBteSBwZXJzb25hbCByZXN1bWUgd2Vic2l0ZSwgc2hvd2Nhc2luZyBteSBza2lsbHMsIGV4cGVyaWVuY2UsIGFuZCBwcm9qZWN0cy4gSXQgc2VydmVzIGFzIGEgZGlnaXRhbCBwb3J0Zm9saW8sIHByb3ZpZGluZyBhIHBsYXRmb3JtIGZvciBvdGhlcnMgdG8gbGVhcm4gbW9yZSBhYm91dCBteSB3b3JrIGFzIGEgZGV2ZWxvcGVyIGFuZCB0aGUgam91cm5leSBJ4oCZdmUgdGFrZW4uIFRoZSB3ZWJzaXRlIGhpZ2hsaWdodHMgdmFyaW91cyBhc3BlY3RzIG9mIG15IGNhcmVlciwgdGVjaG5pY2FsIGV4cGVydGlzZSwgYW5kIGNyZWF0aXZlIGVuZGVhdm9ycy4='
+	);
+
+	setInterval(() => {
+		imageResultUrl = resultUrl;
+	}, 2500);
 
 	// svelte-ignore state_referenced_locally
 	let encodedUrl = $state(resultUrl);
 
 	let decodedResult = $state(params);
 	$effect(() => {
-		console.log(encodedUrl);
-
 		try {
 			const searchParams = new URL(encodedUrl).searchParams;
 			const result: Record<string, string> = {};
@@ -98,14 +105,26 @@
 						placeholder={$language === 'ru' ? 'Описание' : 'Icon link'}
 						bind:value={description}
 					/>
-					<img class="rounded-md bg-background px-4 py-2" src={resultUrl} alt="og result" />
-					<Button
-						variant="outline"
-						class="h-auto whitespace-pre-wrap break-all"
-						onclick={() => navigator.clipboard.writeText(resultUrl)}
-					>
-						{resultUrl}
-					</Button>
+					<img
+						class="rounded-md border border-input bg-background"
+						src={imageResultUrl}
+						alt="og result"
+					/>
+					<Tooltip.Provider>
+						<Tooltip.Root>
+							<Tooltip.Trigger
+								class="{buttonVariants({
+									variant: 'outline'
+								})} h-auto whitespace-pre-wrap break-all"
+								onclick={() => navigator.clipboard.writeText(resultUrl)}
+							>
+								{resultUrl}
+							</Tooltip.Trigger>
+							<Tooltip.Content>
+								<p>{$language === 'ru' ? 'Скопировать ссылку' : 'Copy link'}</p>
+							</Tooltip.Content>
+						</Tooltip.Root>
+					</Tooltip.Provider>
 				</Card.Content>
 			</Card.Root>
 		</Tabs.Content>
@@ -127,15 +146,26 @@
 					/>
 					<div class="mt-6 flex flex-col space-y-2">
 						{#each Object.entries(decodedResult) as [param, value]}
-							<Label for={params[param]}>{params[param]}</Label>
-							<Button
-								id={params[param]}
-								variant="outline"
-								class="h-auto whitespace-pre-wrap break-all"
-								onclick={() => navigator.clipboard.writeText(value)}
-							>
-								{value}
-							</Button>
+							<Label>{params[param]}</Label>
+							<Tooltip.Provider>
+								<Tooltip.Root>
+									<Tooltip.Trigger
+										class="{buttonVariants({
+											variant: 'outline'
+										})} h-auto whitespace-pre-wrap break-all"
+										onclick={() => navigator.clipboard.writeText(value)}
+									>
+										{value}
+									</Tooltip.Trigger>
+									<Tooltip.Content>
+										<p>
+											{$language === 'ru'
+												? 'Скопировать ' + params[param]
+												: 'Copy ' + params[param]}
+										</p>
+									</Tooltip.Content>
+								</Tooltip.Root>
+							</Tooltip.Provider>
 						{/each}
 					</div>
 				</Card.Content>
