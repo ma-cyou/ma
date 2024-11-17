@@ -13,7 +13,7 @@
 	let website = $state('https://ma.cyou/');
 
 	let result = $derived(
-		icon && title && description && website
+		icon || title || description || website
 			? encodeURI(`${url}?c=${icon}&y=${title}&o=${description}&u=${website}`)
 			: url
 	);
