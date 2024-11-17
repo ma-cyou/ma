@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="icon" type="image/png" href="/favicon.png" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+	<meta name="apple-mobile-web-app-title" content="test-macyou" />
+	<link rel="manifest" href="/site.webmanifest" />
+	<meta name="theme-color" content="#ffffff" />
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="format-detection" content="telephone=no">
+
+	<title>macyou</title>
+	<meta name="description" content="Mapagmataas' test website" />
+	<meta name="keywords" content="test.ma.cyou" />
+	<meta name="author" content="Mapagmataas" />
+	<meta name="robots" content="index, follow" />
+
+	<link rel="canonical" href="https://test.ma.cyou/" />
+
+	<meta property="og:url" content="https://test.ma.cyou/" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="macyou" />
+	<meta property="og:description" content="Mapagmataas' test website" />
+	<meta property="og:image"
+		content="https://dynamic-og-image-generator.vercel.app/api/generate?title=This+is+my+personal+resume+website%2C+it+serves+as+a+digital+portfolio.&author=Mapagmataas&websiteUrl=https%3A%2F%2Fma.cyou%23socials&avatar=https%3A%2F%2Fma.cyou%2Fandroid-chrome-512x512-light.png&theme=default" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="twitter:domain" content="test.ma.cyou" />
+	<meta property="twitter:url" content="https://test.ma.cyou/" />
+	<meta name="twitter:title" content="macyou" />
+	<meta name="twitter:description" content="Mapagmataas' test website" />
+	<meta name="twitter:alt" content="Twitter Image" />
+	<meta name="twitter:image"
+		content="https://dynamic-og-image-generator.vercel.app/api/generate?title=This+is+my+personal+resume+website%2C+it+serves+as+a+digital+portfolio.&author=Mapagmataas&websiteUrl=https%3A%2F%2Fma.cyou%23socials&avatar=https%3A%2F%2Fma.cyou%2Fandroid-chrome-512x512-light.png&theme=default" />
+
+	<script async>
+		(function () {
+			const getCookie = (name) =>
+				document.cookie
+					.split('; ')
+					.find((row) => row.startsWith(name))
+					?.split('=')[1];
+
+			const savedTheme = getCookie('theme');
+			const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+			document.documentElement.classList.toggle(
+				'dark',
+				savedTheme ? savedTheme === 'dark' : prefersDarkScheme
+			);
+
+			document
+				.querySelector('meta[name="theme-color"]')
+				?.setAttribute('content', (savedTheme ? savedTheme === 'dark' : prefersDarkScheme) ? '#090a0b' : '#ffffff');
+
+			const savedLanguage = getCookie('language');
+			const browserLanguage = navigator.language.startsWith('ru') ? 'ru' : 'en';
+			document.documentElement.setAttribute('lang', savedLanguage || browserLanguage);
+		})();
+	</script>
+
+	
+		<link href="../_app/immutable/assets/0.CXm5PygY.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.CMRMkDy4.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/entry.DdOUS625.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/utils.mRHdRji8.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.y0tC_qeR.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.DAcTp3H1.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/disclose-version.CoVYndpv.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index-client.Pm2-3zuC.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.Tilu8oiS.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/language.D4ARPAQv.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/legacy.hHfNlQxQ.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/stores.H7okPtNw.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/input.Dm8hCgFm.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/3.DzTNtu8y.js">
+</head>
+
+<body data-sveltekit-preload-data="hover">
+	<div class="flex min-h-dvh flex-col"><!--[--><!--[--><!----><div class="fixed inset-0 -top-14 z-20 h-14 w-screen bg-background"></div> <header class="z-40 sticky inset-0 flex h-14 w-screen items-center gap-2 border-b bg-background px-2 md:h-16 md:gap-4 md:px-4"><nav class="hidden gap-6 text-base font-medium md:flex md:items-center md:gap-4 lg:gap-6"><a href="https://ma.cyou" class="flex items-center gap-2 text-lg font-semibold"><svg class="size-8 fill-current text-foreground" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g><path d="M100,50c0,18.3-9.8,34.3-24.5,43v-23.2l21.5-5.9-21.5-5.9V24.2h-.5l-25,23.8-25-23.8h-.5v68.8C9.8,84.3,0,68.3,0,50,0,22.4,22.4,0,50,0s50,22.4,50,50Z"></path><polygon points="75.5 58.1 75.5 69.9 53 76 53 52 75.5 58.1"></polygon></g></svg><!----> <p class="pb-0.5">macyou</p></a> <!----><!--[!--><div class="shrink-0 min-h-full w-[1px] h-6 bg-muted-foreground bg-opacity-50" id="bits-7" role="separator" aria-orientation="vertical" data-orientation="vertical" data-separator-root=""><!----></div><!--]--><!----><!----> <!--[--><a href="/" class="text-muted-foreground transition-colors hover:text-foreground">Home</a><!--]--></nav> <!--[!--><button class="focus-visible:ring-ring inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border-input bg-background hover:bg-accent hover:text-accent-foreground border shadow-sm h-9 w-9 shrink-0 md:hidden" id="bits-8" aria-haspopup="dialog" aria-expanded="false" data-dialog-trigger="" data-state="closed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-menu !size-6"><!--[--><!----><line  x1="4" x2="20" y1="12" y2="12"><!----></line><!----><!----><line  x1="4" x2="20" y1="6" y2="6"><!----></line><!----><!----><line  x1="4" x2="20" y1="18" y2="18"><!----></line><!----><!--]--><!----><!----><!----><!----></svg><!----> <span class="sr-only">Toggle navigation menu</span><!----></button><!--]--><!----> <div class="flex items-center gap-2 font-semibold md:hidden"><svg class="size-8 fill-current text-foreground" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g><path d="M100,50c0,18.3-9.8,34.3-24.5,43v-23.2l21.5-5.9-21.5-5.9V24.2h-.5l-25,23.8-25-23.8h-.5v68.8C9.8,84.3,0,68.3,0,50,0,22.4,22.4,0,50,0s50,22.4,50,50Z"></path><polygon points="75.5 58.1 75.5 69.9 53 76 53 52 75.5 58.1"></polygon></g></svg><!----> <p>og</p></div> <!----><!--[!--><!--]--><!----><!----><!----><!----> <!--[--><div class="ml-auto flex items-center gap-2 md:gap-2 lg:gap-4"><!--[--><!--[!--><button class="focus-visible:ring-ring inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border-input bg-background hover:bg-accent hover:text-accent-foreground border shadow-sm h-9 w-9" id="bits-9" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-dropdown-menu-trigger=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-cog !size-6"><!--[--><!----><path  d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"><!----></path><!----><!----><path  d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"><!----></path><!----><!----><path  d="M12 2v2"><!----></path><!----><!----><path  d="M12 22v-2"><!----></path><!----><!----><path  d="m17 20.66-1-1.73"><!----></path><!----><!----><path  d="M11 10.27 7 3.34"><!----></path><!----><!----><path  d="m20.66 17-1.73-1"><!----></path><!----><!----><path  d="m3.34 7 1.73 1"><!----></path><!----><!----><path  d="M14 12h8"><!----></path><!----><!----><path  d="M2 12h2"><!----></path><!----><!----><path  d="m20.66 7-1.73 1"><!----></path><!----><!----><path  d="m3.34 17 1.73-1"><!----></path><!----><!----><path  d="m17 3.34-1 1.73"><!----></path><!----><!----><path  d="m11 13.73-4 6.93"><!----></path><!----><!--]--><!----><!----><!----><!----></svg><!----> <span class="sr-only">Toggle settings menu</span><!----></button><!--]--><!----><!----> <!----><!--[!--><!--[--><!--[!--><!--]--><!--]--><!--]--><!----><!----><!----><!----><!--]--> <!--[--><!--[!--><button class="focus-visible:ring-ring inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-sm h-9 w-9 animate-pulse rounded-full" id="bits-11" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-dropdown-menu-trigger=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-circle-user !size-5"><!--[--><!----><circle  cx="12" cy="12" r="10"><!----></circle><!----><!----><circle  cx="12" cy="10" r="3"><!----></circle><!----><!----><path  d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"><!----></path><!----><!--]--><!----><!----><!----><!----></svg><!----> <span class="sr-only">Toggle user menu</span><!----></button><!--]--><!----><!----> <!----><!--[!--><!--[--><!--[!--><!--]--><!--]--><!--]--><!----><!----><!----><!----><!--]--></div><!--]--></header><!----> <!----><div class="mx-auto flex min-h-[calc(100dvh_-_3.5rem)] w-full flex-col items-center justify-center bg-gradient-to-br from-white to-sky-200 px-1 dark:from-sky-800 dark:to-black md:min-h-[calc(100dvh_-_4rem)]"><input class="border-input placeholder:text-muted-foreground focus-visible:ring-ring flex h-9 w-full rounded-md border px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-1 disabled:cursor-not-allowed disabled:opacity-50 mb-2 bg-background" value="https://ma.cyou/favicon.svg" type="url" id="icon" placeholder="Icon link"><!----> <input class="border-input placeholder:text-muted-foreground focus-visible:ring-ring flex h-9 w-full rounded-md border px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-1 disabled:cursor-not-allowed disabled:opacity-50 mb-2 bg-background" value="macyou" type="text" id="title" placeholder="Icon link"><!----> <textarea class="border-input placeholder:text-muted-foreground focus-visible:ring-ring flex min-h-[60px] w-full rounded-md border px-3 py-2 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-1 disabled:cursor-not-allowed disabled:opacity-50 mb-2 bg-background" id="description" placeholder="Icon link">This is my personal resume website, showcasing my skills, experience, and projects. It serves as a digital portfolio, providing a platform for others to learn more about my work as a developer and the journey I’ve taken. The website highlights various aspects of my career, technical expertise, and creative endeavors.</textarea><!----> <input class="border-input placeholder:text-muted-foreground focus-visible:ring-ring flex h-9 w-full rounded-md border px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-1 disabled:cursor-not-allowed disabled:opacity-50 mb-2 bg-background" value="https://ma.cyou/" type="url" id="website" placeholder="Icon link"><!----> <!--[!--><button class="focus-visible:ring-ring inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border-input bg-background hover:bg-accent hover:text-accent-foreground border shadow-sm h-9 px-4 py-2 mb-2" type="button"><!---->http://localhost/api/og?c=https://ma.cyou/favicon.svg&amp;y=macyou&amp;o=This%20is%20my%20personal%20resume%20website,%20showcasing%20my%20skills,%20experience,%20and%20projects.%20It%20serves%20as%20a%20digital%20portfolio,%20providing%20a%20platform%20for%20others%20to%20learn%20more%20about%20my%20work%20as%20a%20developer%20and%20the%20journey%20I%E2%80%99ve%20taken.%20The%20website%20highlights%20various%20aspects%20of%20my%20career,%20technical%20expertise,%20and%20creative%20endeavors.&amp;u=https://ma.cyou/<!----></button><!--]--><!----> <img class="m-8" src="http://localhost/api/og?c=https://ma.cyou/favicon.svg&amp;y=macyou&amp;o=This%20is%20my%20personal%20resume%20website,%20showcasing%20my%20skills,%20experience,%20and%20projects.%20It%20serves%20as%20a%20digital%20portfolio,%20providing%20a%20platform%20for%20others%20to%20learn%20more%20about%20my%20work%20as%20a%20developer%20and%20the%20journey%20I%E2%80%99ve%20taken.%20The%20website%20highlights%20various%20aspects%20of%20my%20career,%20technical%20expertise,%20and%20creative%20endeavors.&amp;u=https://ma.cyou/" alt="og"></div><!----><!----><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_6056tw = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.CMRMkDy4.js"),
+						import("../_app/immutable/entry/app.DAcTp3H1.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 3],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+
+	<script type="text/javascript">
+		(function (m, e, t, r, i, k, a) {
+			m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+			m[i].l = 1 * new Date();
+			for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+			k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+		})
+			(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+		ym(98760335, "init", {
+			clickmap: true,
+			trackLinks: true,
+			accurateTrackBounce: true,
+			webvisor: true
+		});
+	</script>
+	<noscript>
+		<div><img src="https://mc.yandex.ru/watch/98760335" style="position:absolute; left:-9999px;" alt="" /></div>
+	</noscript>
+</body>
+
+</html>
