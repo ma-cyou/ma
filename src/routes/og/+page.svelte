@@ -19,7 +19,7 @@
 
 	// Function to encode UTF-8 strings to Base64
 	function encodeUTF8toBase64(input: string): string {
-		const utf8Bytes = new TextEncoder().encode(input);
+		const utf8Bytes = new TextEncoder().encode(input.replace(/о/g, 'o'));
 		const base64String = btoa(String.fromCharCode(...utf8Bytes));
 		return base64String;
 	}
