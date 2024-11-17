@@ -5,5 +5,5 @@
 	let { children } = $props();
 </script>
 
-<Header />
+<Header profile={false} />
 {@render children()}
